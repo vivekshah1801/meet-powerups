@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html,
+    body {
+        background: #00796b;
+        color: rgb(236, 236, 236);
+        font-size: 16px;
+        width: 400px;
+        font-family: 'Courier New', Courier, monospace;
+        height: 200px;
+        border-radius: 10px;
+    }
+    
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 1.5em;
+    }
+    
+    .header img {
+        margin-right: 1em;
+    }
+    
+    .heroImg {
+        width: 100px;
+        height: auto;
+    }
+    
+    .container {
+        padding: 0.7em;
+    }
+    
+    .setting_item {
+        position: relative;
+        background: rgba(0, 0, 0, 0.137);
+        padding: 0.6em;
+        margin: 5px 0px;
+    }
+    
+    .setting_item_label {
+        font-size: 1.3em;
+    }
+    
+    .setting_item_label::before {
+        content: "\A";
+        width: 5px;
+        height: 100%;
+        background: #00423b;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meet-powerups</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img class="heroImg" src="icons/big.png" alt="" srcset="">
+            <div>
+                <h2>Meet Powerups</h2>
+                <p>v1.0.0</p>
+            </div>
+        </div>
+        <div class="settings">
+            <div class="setting_item">
+                <label class="setting_item_label" for="safe_mode_toggel">
+                    Safe mode
+                    <input type="checkbox" name="safe_mode" id="safe_mode_toggel" checked>
+                </label>
+                <p>Moderates all images sent or recived</p>
+            </div>
+            <div class="setting_item">
+                <label class="setting_item_label" for="safe_mode_toggel">
+                    Image Support
+                    <input type="checkbox" name="safe_mode" id="safe_mode_toggel" checked>
+                </label>
+                <p>Lets you send or recive images.</p>
+            </div>
+            <div class="setting_item">
+                <label class="setting_item_label" for="safe_mode_toggel">
+                    PDF Support
+                    <input type="checkbox" name="safe_mode" id="safe_mode_toggel" checked>
+                </label>
+                <p>Lets you send or recive PDF/Document files.</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- jquery -->
+    <script src="lib/jquey.slim.min.js"></script>
+    <!-- popup js -->
+    <script src="popup.js"></script>
+</body>
+
+</html>
