@@ -1,0 +1,2 @@
+https://developer.chrome.com/extensions/content_scripts
+https://dev.to/akhil_001/adding-event-listeners-to-the-future-dom-elements-using-event-bubbling-3cp1#:~:text=let%20rootElement%20%3D%20document.,case%2C%20it%20is%20click%20event)
