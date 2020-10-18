@@ -7,15 +7,38 @@ var dom_observer = new MutationObserver(function(mutations) {
             let node = mutation.addedNodes[0];
             if(node)
             {            
-                // console.log(node)
-                if(node.dataset.senderName)
-                {
-                    textnode = node.querySelector("[data-message-text]")
-                    console.log(textnode.dataset.messageText)
+                // if(node.dataset.senderName)
+                // {
+                //     textnode = node.querySelector("[data-message-text]")
+                //     console.log(textnode.dataset.messageText)
+                // }
+                // else if(node.dataset.messageText)
+                // {
+                //     console.log(node.dataset.messageText)
+                // }
+
+                if(node.dataset.senderName){
+                    node = node.querySelector("[data-message-text]")
                 }
-                else if(node.dataset.messageText)
+                
+                if(node.dataset && node.dataset.messageText)
                 {
-                    console.log(node.dataset.messageText)
+                    message = node.dataset.messageText
+                    console.log(message)
+                    if (message!=""
+                        && (message.startsWith("https://firebasestorage.googleapis.com")
+                        || message.endsWith(".png"))
+                    ){
+                        a = document.createElement("a")
+                        a.href = message
+                        a.target = "_blank"
+                        img = document.createElement("img")
+                        img.alt = message
+                        img.src = message
+                        img.style = "width:300px !important"
+                        a.appendChild(img)
+                        node.parentNode.replaceChild(a, node)
+                    }
                 }
             }
         }
