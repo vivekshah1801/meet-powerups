@@ -10,3 +10,5 @@ inputB.addEventListener('paste', function(){
 - Google Security policies and integrating firebase
 - getting locations of elements
 - getting image from the clipboard and sending it to firebase storage.
+- MutationObserver
+- Event Bubbling
