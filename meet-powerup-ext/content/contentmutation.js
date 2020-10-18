@@ -26,8 +26,14 @@ var dom_observer = new MutationObserver(function(mutations) {
                     message = node.dataset.messageText
                     console.log(message)
                     if (message!=""
-                        && (message.startsWith("https://firebasestorage.googleapis.com")
-                        || message.endsWith(".png"))
+                        && 
+                        (
+                            message.startsWith("https://firebasestorage.googleapis.com")
+                            || message.endsWith(".png") 
+                            || message.endsWith(".jpg")
+                            || message.endsWith(".jpeg")
+                            || message.endsWith(".webp")
+                        )
                     ){
                         a = document.createElement("a")
                         a.href = message
