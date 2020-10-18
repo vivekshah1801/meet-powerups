@@ -1,0 +1,26 @@
+{
+	"name":"Meet-Powerups",
+	"version":"0.1",
+	"description":"Powerup your google meet experience",
+	"manifest_version":2,
+
+	"permissions": ["storage",
+					"https://www.gstatic.com/firebasejs/5.3.0/firebase.js"
+	],
+	"background": {
+		"scripts" : ["background/background.js"],
+		"persistant": false
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["*://meet.google.com/*"],
+			"js": [
+				"vendor/firebase/firebase-app.js",
+				"vendor/firebase/firebase-storage.js",
+				"content/contentmutation.js"
+			],
+			"css": []
+		}
+	]
+}
